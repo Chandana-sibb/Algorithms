@@ -97,8 +97,13 @@ def bisect_right(
 
     return lo
 
+<<<<<<< HEAD
 #Fourth Change
 def in_sort_left(
+=======
+#Third Change
+def _insort_left(
+>>>>>>> test
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
 ) -> None:
     """
@@ -321,8 +326,13 @@ def exponential_search(sorted_collection: list[int], item: int) -> int:
         return -1
     return last_result
 
+<<<<<<< HEAD
 # Fastest to slowest...
 searches = (  
+=======
+
+searches = (  # Fastest to slowest...
+>>>>>>> test
     binary_search_std_lib,
     binary_search,
     exponential_search,
