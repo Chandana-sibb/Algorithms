@@ -1,8 +1,11 @@
 """
 This is pure Python implementation of fibonacci search.
 
+<<<<<<< HEAD
+=======
 Resources used:
 https://en.wikipedia.org/wiki/Fibonacci_search_technique
+>>>>>>> test
 
 For doctests run following command:
 python3 -m doctest -v fibonacci_search.py

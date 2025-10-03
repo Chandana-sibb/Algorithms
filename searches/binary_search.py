@@ -58,7 +58,15 @@ def bisect_left(
 #Second Change
 
 def bisect_right(
+<<<<<<< HEAD
     sorted_collection: list[int], item: int, lo: int = 0, hii: int = -1
+=======
+<<<<<<< HEAD
+    sorted_collection: list[int], item: int, lo: int = 0, hii: int = -1
+=======
+    sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
+>>>>>>> test
+>>>>>>> test1
 ) -> int:
     """
     Locates the first element in a sorted array that is larger than a given value.
@@ -85,8 +93,30 @@ def bisect_right(
     >>> bisect_right([0, 5, 7, 10, 15], 6, 2)
     2
     """
+<<<<<<< HEAD
     if hii < 0:
         hii = len(sorted_collection)
+=======
+<<<<<<< HEAD
+    if hii < 0:
+        hii = len(sorted_collection)
+
+    while lo < hii:
+        mid = lo + (hii - lo) // 2
+        if sorted_collection[mid] <= item:
+            lo = mid + 1
+        else:
+            hii = mid
+
+    return lo
+
+#Fourth Change
+def in_sort_left(
+    sorted_collection: list[int], item: int, lo: int = 0, hii: int = -1
+=======
+    if hi < 0:
+        hi = len(sorted_collection)
+>>>>>>> test1
 
     while lo < hii:
         mid = lo + (hii - lo) // 2
@@ -110,6 +140,7 @@ def _insort_left(
 def insort_left(
 >>>>>>> 168615b8 (New Commit Message)
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
+>>>>>>> test
 ) -> None:
     """
     Inserts a given value into a sorted array before other values with the same value.
@@ -145,11 +176,19 @@ def insort_left(
     >>> sorted_collection
     [0, 5, 7, 15, 10, 15]
     """
+<<<<<<< HEAD
+    sorted_collection.insert(bisect_left(sorted_collection, item, lo, hii), item)
+
+
+def insort_right(
+    sorted_collection: list[int], item: int, lo: int = 0, hii: int = -1
+=======
     sorted_collection.insert(bisect_left(sorted_collection, item, lo, hi), item)
 
 
 def insort_right(
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
+>>>>>>> test
 ) -> None:
     """
     Inserts a given value into a sorted array after other values with the same value.
@@ -185,7 +224,11 @@ def insort_right(
     >>> sorted_collection
     [0, 5, 7, 15, 10, 15]
     """
+<<<<<<< HEAD
+    sorted_collection.insert(bisect_right(sorted_collection, item, lo, hii), item)
+=======
     sorted_collection.insert(bisect_right(sorted_collection, item, lo, hi), item)
+>>>>>>> test
 
 
 def binary_search(sorted_collection: list[int], item: int) -> int:
@@ -246,7 +289,11 @@ def binary_search_std_lib(sorted_collection: list[int], item: int) -> int:
     -1
     """
     if list(sorted_collection) != sorted(sorted_collection):
+<<<<<<< HEAD
+        raise ValueError("sorted_collection must be sorted in Ascending Order")
+=======
         raise ValueError("sorted_collection must be sorted in ascending order")
+>>>>>>> test
     index = bisect.bisect_left(sorted_collection, item)
     if index != len(sorted_collection) and sorted_collection[index] == item:
         return index
@@ -267,8 +314,12 @@ def binary_search_by_recursion(
     :return: index of the found item or -1 if the item is not found
 
     Examples:
+<<<<<<< HEAD
+    
+=======
     >>> binary_search_by_recursion([0, 5, 7, 10, 15], 0, 0, 4)
     0
+>>>>>>> test
     >>> binary_search_by_recursion([0, 5, 7, 10, 15], 15, 0, 4)
     4
     >>> binary_search_by_recursion([0, 5, 7, 10, 15], 5, 0, 4)
@@ -276,7 +327,11 @@ def binary_search_by_recursion(
     >>> binary_search_by_recursion([0, 5, 7, 10, 15], 6, 0, 4)
     -1
     """
+<<<<<<< HEAD
+    if right > 0:
+=======
     if right < 0:
+>>>>>>> test
         right = len(sorted_collection) - 1
     if list(sorted_collection) != sorted(sorted_collection):
         raise ValueError("sorted_collection must be sorted in ascending order")
@@ -295,8 +350,12 @@ def binary_search_by_recursion(
 
 def exponential_search(sorted_collection: list[int], item: int) -> int:
     """Pure implementation of an exponential search algorithm in Python
+<<<<<<< HEAD
+    
+=======
     Resources used:
     https://en.wikipedia.org/wiki/Exponential_search
+>>>>>>> test
 
     Be careful collection must be ascending sorted otherwise, result will be
     unpredictable
@@ -336,6 +395,10 @@ def exponential_search(sorted_collection: list[int], item: int) -> int:
 searches = (  
 =======
 
+<<<<<<< HEAD
+searches = (  
+            # Fast to slow
+=======
 searches = (  # Fastest to slowest...
 >>>>>>> test
     binary_search_std_lib,
