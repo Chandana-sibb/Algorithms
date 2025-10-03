@@ -1,4 +1,4 @@
-# https://en.wikipedia.org/wiki/Hill_climbing
+
 import math
 
 
@@ -9,14 +9,7 @@ class SearchProblem:
     """
 
     def __init__(self, x: int, y: int, step_size: int, function_to_optimize):
-        """
-        The constructor of the search problem.
-
-        x: the x coordinate of the current search state.
-        y: the y coordinate of the current search state.
-        step_size: size of the step to take when looking for neighbors.
-        function_to_optimize: a function to optimize having the signature f(x, y).
-        """
+       
         self.x = x
         self.y = y
         self.step_size = step_size
