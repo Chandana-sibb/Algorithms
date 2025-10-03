@@ -323,7 +323,7 @@ def exponential_search(sorted_collection: list[int], item: int) -> int:
 
 
 searches = (  # Fastest to slowest...
-    binary_search_std_lib,
+    binary_search_std_li,
     binary_search,
     exponential_search,
     binary_search_by_recursion,
