@@ -58,7 +58,7 @@ def bisect_left(
 #Second Change
 
 def bisect_right(
-    sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
+    sorted_collection: list[int], item: int, lo: int = 0, hii: int = -1
 ) -> int:
     """
     Locates the first element in a sorted array that is larger than a given value.
@@ -85,20 +85,20 @@ def bisect_right(
     >>> bisect_right([0, 5, 7, 10, 15], 6, 2)
     2
     """
-    if hi < 0:
-        hi = len(sorted_collection)
+    if hii < 0:
+        hii = len(sorted_collection)
 
-    while lo < hi:
-        mid = lo + (hi - lo) // 2
+    while lo < hii:
+        mid = lo + (hii - lo) // 2
         if sorted_collection[mid] <= item:
             lo = mid + 1
         else:
-            hi = mid
+            hii = mid
 
     return lo
 
-#Third Change
-def insort_left(
+#Fourth Change
+def in_sort_left(
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
 ) -> None:
     """
@@ -321,9 +321,9 @@ def exponential_search(sorted_collection: list[int], item: int) -> int:
         return -1
     return last_result
 
-
-searches = (  # Fastest to slowest...
-    binary_search_std_li,
+# Fastest to slowest...
+searches = (  
+    binary_search_std_lib,
     binary_search,
     exponential_search,
     binary_search_by_recursion,
