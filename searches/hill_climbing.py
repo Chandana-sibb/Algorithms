@@ -2,6 +2,7 @@
 import math
 
 
+<<<<<<< HEAD
 class SearchProblem:
     """
     An interface to define search problems.
@@ -174,3 +175,5 @@ if __name__ == "__main__":
         "The maximum score for f(x, y) = x^2 + y^2 found via hill climbing: "
         f"{local_min.score()}"
     )
+=======
+>>>>>>> test
