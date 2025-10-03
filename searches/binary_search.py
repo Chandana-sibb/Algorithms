@@ -98,12 +98,17 @@ def bisect_right(
     return lo
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Fourth Change
 def in_sort_left(
 =======
 #Third Change
 def _insort_left(
 >>>>>>> test
+=======
+#Third Change
+def insort_left(
+>>>>>>> 168615b8 (New Commit Message)
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
 ) -> None:
     """
