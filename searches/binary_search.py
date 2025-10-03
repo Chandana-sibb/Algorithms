@@ -13,7 +13,7 @@ python3 binary_search.py
 from __future__ import annotations
 
 import bisect
-
+# First Change
 
 def bisect_left(
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
@@ -55,7 +55,7 @@ def bisect_left(
             hi = mid
 
     return lo
-
+#Second Change
 
 def bisect_right(
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
@@ -97,7 +97,7 @@ def bisect_right(
 
     return lo
 
-
+#Third Change
 def insort_left(
     sorted_collection: list[int], item: int, lo: int = 0, hi: int = -1
 ) -> None:
